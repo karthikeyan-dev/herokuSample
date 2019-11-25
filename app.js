@@ -1,7 +1,7 @@
 const request = require('request')
 const express = require('express')
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 var options = {
     url: 'https://gateway-lon.watsonplatform.net/discovery/api/v1/environments/system/collections/news-en/query?version=2018-12-03&deduplicate=false&highlight=true&passages=true&passages.count=5&natural_language_query=weather',
